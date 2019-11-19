@@ -1,0 +1,12 @@
+deploy_christopher:
+  tags:
+    - christopher.sebbo.net
+    - ssh
+  script:
+    - sudo rm -rf /etc/atv2mqtt
+    - sudo mkdir /etc/atv2mqtt
+    - npm i --only=prod
+    - sudo cp -R ./* /etc/atv2mqtt
+    - forever restart atv2mqtt
+  only:
+    - master
