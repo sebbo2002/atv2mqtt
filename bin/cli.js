@@ -2,15 +2,15 @@
 
 const fs = require('fs');
 const path = require('path');
-const PyAtvMqttBridge = require('../src');
+const atv2mqtt = require('../src');
 
-console.log('# pyatv-mqtt-bridge');
+console.log('# atv2mqtt');
 console.log('----------------------------');
 
 const debug = process.argv.indexOf('--debug') > -1;
 const configPath = path.resolve(process.cwd(), process.argv[process.argv.length - 1]);
 if (!fs.existsSync(configPath)) {
-    console.log('Usage: pyatv-mqtt-bridge [--debug] ~/pyatv-mqtt-bridge-config.json');
+    console.log('Usage: atv2mqtt [--debug] ~/atv2mqtt-config.json');
     process.exit(1);
 }
 
@@ -50,8 +50,8 @@ try {
         });
     }
 
-    new PyAtvMqttBridge(config);
+    new atv2mqtt(config);
 } catch (err) {
-    console.log('Unable to start bridge:');
+    console.log('Unable to start atv2mqtt:');
     console.log(err);
 }
