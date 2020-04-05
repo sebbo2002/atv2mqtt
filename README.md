@@ -2,9 +2,9 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
-AppleTV2MQTT allows you to remote control your Apple TV using the MQTT protocol. Many home automation systems support 
-this protocol, so Apple TV can be integrated into your existing automation system. In addition to 
-simulating key presses, you can also query the current state of Apple TV. This module uses a forked version of 
+atv2mqtt allows you to remote control your Apple TV using the MQTT protocol. Many home automation systems support
+this protocol, so Apple TV can be integrated into your existing automation system. In addition to
+simulating key presses, you can also query the current state of Apple TV. This module uses a forked version of
 [node-appletv](https://github.com/evandcoleman/node-appletv).
 
 
@@ -13,7 +13,7 @@ simulating key presses, you can also query the current state of Apple TV. This m
 To install the javascript module via npm run:
 
     sudo apt-get install autoconf libtool
-	npm install -g http://github.com/sebbo2002/atv2mqtt.git
+	npm install -g @sebbo2002/atv2mqtt
 
 
 ## ⚒ Quick Start
