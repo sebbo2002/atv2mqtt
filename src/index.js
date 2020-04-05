@@ -87,12 +87,12 @@ class ATV2MQTT {
         const devices = await AppleTV.scan(credentials.uniqueIdentifier);
         this._log('info', id, `Found ${devices.length} devices`);
         if(!devices.length) {
-            this._log('info', id, `Device not found, try again in a bit…`);
+            this._log('info', id, 'Device not found, try again in a bit…');
             await new Promise(cb => setTimeout(cb, 30000));
             return this._startDevice(device);
         }
 
-        let push, shutdownPush;
+        let shutdownPush;
         const appletv = await devices[0].openConnection(credentials);
 
 
