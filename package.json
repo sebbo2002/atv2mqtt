@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/sebbo2002/atv2mqtt.git"
+    "url": "https://github.com/sebbo2002/atv2mqtt.git"
   },
   "bin": {
     "atv2mqtt": "./bin/cli.js"
@@ -18,15 +18,18 @@
     "node": ">=8.0.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
     "eslint": "^6.8.0",
-    "npm-check": "^5.9.2"
+    "npm-check": "^5.9.2",
+    "semantic-release": "^17.0.4"
   },
   "scripts": {
     "all": "npm run check",
     "check": "npm run check:eslint && npm run check:npm",
     "check:eslint": "eslint ./bin ./src",
     "check:quick": "npm run check:eslint",
-    "check:npm": "npm-check -s"
+    "check:npm": "npm-check -s",
+    "release": "semantic-release"
   },
   "main": "./src/index.js",
   "dependencies": {
