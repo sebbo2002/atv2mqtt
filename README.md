@@ -12,6 +12,7 @@ simulating key presses, you can also query the current state of Apple TV. This m
 
 To install the javascript module via npm run:
 
+    sudo apt-get install autoconf libtool
 	npm install -g http://github.com/sebbo2002/atv2mqtt.git
 
 
