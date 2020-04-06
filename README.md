@@ -18,9 +18,11 @@ To install the javascript module via npm run:
 
 ## ⚒ Quick Start
 
-1. Use node-appletv to connect to your Apple TV and authenticate [[?](https://github.com/evandcoleman/node-appletv#as-a-standalone-cli)]
+#### Authenticate
+Use node-appletv to connect to your Apple TV and authenticate [[?](https://github.com/evandcoleman/node-appletv#as-a-standalone-cli)]
 
-2. Create a new atv2mqtt configuration file
+#### Create Configuration File
+Create a new atv2mqtt configuration file
 ```json
 {
   "broker": "mqtt://192.168.1.1",
@@ -33,10 +35,20 @@ To install the javascript module via npm run:
 }
 ```
 
-3. Start atv2mqtt
+#### Start atv2mqtt
 ```bash
 atv2mqtt /home/eve/atv2mqtt.json
 ```
+
+#### Subscribe to events
+The module atv2mqtt creates several topics per configured Apple TV, which contain current information about the status.
+It's best to watch this live with a MQTT client. To get the IP address with the sample configuration above, you would
+subscribe to `/home/livingroom/appletv/address` for example.
+
+#### Press keys
+You can use atv2mqtt to simulate keystrokes via MQTT and send them to Apple TV. Simply order an MQTT message from the
+configured topic prefix and the name of the key (content not relevant) and send it. Boom - virtual keystroke. Need an
+example? Okay: `/home/livingroom/appletv/menu`. You'll find all keys [here](https://github.com/sebbo2002/atv2mqtt/blob/master/src/index.js#L6).
 
 
 
