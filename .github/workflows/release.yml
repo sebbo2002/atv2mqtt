@@ -30,7 +30,7 @@ jobs:
               mv -f ./package.backup.json ./package.json
               mv -f ./package-lock.backup.json ./package-lock.json
           fi
-      - run: npm run check
+      - run: npm run check:eslint
   release:
     runs-on: ubuntu-latest
     needs: [checks]
