@@ -2,6 +2,15 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
+## 🚨 Deprecation Notice
+
+**This project is no longer maintained, because I can't find a current version of node-appletv that meets my
+expectations (works with current OS versions, is maintained, etc.). In return, I will bring my project
+[pyatv-mqtt-bridge](https://github.com/sebbo2002/pyatv-mqtt-bridge) out of retirement and bring it back up to life.**
+
+<br />
+<br />
+
 atv2mqtt allows you to remote control your Apple TV using the MQTT protocol. Many home automation systems support
 this protocol, so Apple TV can be integrated into your existing automation system. In addition to
 simulating key presses, you can also query the current state of Apple TV. This module uses a forked version of
